@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- title and meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<meta name="description" content="EM Fitness is a personalized in-home training service that specializes in maximum weight loss, toning and lifestyle changes." />
+<link rel="stylesheet" href="style/main.css" />
+<link href="style/animate.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="style/slicknav.css" />
+<link rel="icon" type="image/png" href="/img/logo-black.png" />
+<meta property="og:description" content="EM Fitness is a personalized in-home training service that specializes in maximum weight loss, toning and lifestyle changes." />
+<meta property="og:image" content="http://emfitness.ca/img/fb-.png" />
+<meta property="og:site_name" content="EM Fitness"/>
+<title>EM Fitness</title>
+    
+<!-- css -->
+
+<style>
+
+.dark {
+  opacity: 0;
+}
+     
+      a.post-title:hover {
+        text-decoration: none;
+        color: {color:Link};
+      }
+     
+      header a:hover {
+        text-decoration: none;
+      }
+     
+      .post img,
+      .photoset,
+      .photoset img,
+      .photoset_row {
+        max-width: 100%;
+      }
+     
+      .post iframe, .video object {
+        width: 100%;
+        max-width: 100%;
+      }
+     
+      .post blockquote {
+        padding-left: 1em;
+        border-left: 1px solid #ddd;
+      }
+     
+      .post ul, .post ol {
+        margin-left: 2em;
+      }
+     
+      .post footer ul, .post footer ol {
+        margin: 0;
+      }
+     
+      .quote blockquote {
+        padding: 0;
+        border: none;
+        font-style: italic;
+      }
+     
+      .quote .source {
+        text-align: right;
+      }
+     
+      .post footer {
+        padding: 0;
+        margin-top: 1em;
+        color: #aaa;
+        font-style: italic;
+      }
+     
+      .post footer a {
+        color: {color:Link};
+      }
+     
+      .post footer a:hover {
+        color: {color:Link};
+      }
+     
+      .post footer .source {
+        float: right;
+        margin-right: 0;
+      }
+     
+      .post footer ul li {
+        display: inline-block;
+        margin-right: 1em;
+      }
+     
+      .tags {
+        margin-top: 1em;
+      }
+     
+      .pagination {
+        margin-top: 4em;
+        text-align: center;
+        line-height: 3em;
+        overflow: hidden;
+      }
+     
+      /*.pagination:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
+      }*/
+     
+      .pagination a {
+        display: block;
+        height: 3em;
+        padding: 0 1em;
+        border-radius: 0.25em;
+      }
+     
+      .pagination a:hover {
+        background:{color:Link};
+        text-decoration: none;
+      }
+     
+      .pagination .previous {
+        float: left;
+      }
+     
+      .pagination .next {
+        float: right;
+      }
+ 
+   
+      footer.wrap {
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+     
+      ul.pages {
+        list-style: none;
+      }
+     
+      ul.pages li {
+        display: inline-block;
+        margin-right: 1em;        
+      }
+     
+      ul.pages li a {
+        display: block;
+        height: 3em;
+        line-height: 3em;
+      }
+     
+     
+      /* Permalink Notes */
+     
+      aside.notes {
+        margin-top: 4em;
+      }
+     
+      ol.notes {
+        list-style: none;
+        margin-top: 1em;
+        border: 1px solid #ddd;
+        border-radius: 0.25em;
+      }
+     
+      ol.notes, ol.notes a {
+        color: #aaa;
+      }
+     
+      li.note {
+        display: block;
+        line-height: 2em;
+        padding: 0.5em 1em;
+        border-bottom: 1px solid #ddd;
+      }
+      li.note:last-child {
+        border: none;
+      }
+     
+      ol.notes li.note img.avatar {
+        display: block;
+        float: left;
+        width: 2em;
+        height: 2em;
+        margin-right: 1em;
+        border-radius: 0.25em;
+      }
+     
+      .notes .action a {
+        color: {color:Text};
+      }
+     
+      .action {
+        display: block;
+        margin-left: 3em;
+      }
+     
+      .notes blockquote {
+        line-height: 1.5;
+        margin-left: 3em;
+      }
+
+
+
+
+@media screen and (max-width: 1100px) {
+
+
+.custom1 {
+  padding-top: 120px;
+  padding-bottom: 100px;
+    color:#000;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-size:100% auto;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  background-color: #fff;
+  background-image:url('img/demo1.jpg') !important;
+  
+}
+
+
+
+.custom2 {
+  color:#000;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-size:100% auto;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  background-color: #fff;
+  background-image:url('img/demo2.jpg') !important;
+  
+}
+
+
+
+}
+
+  </style>
+</head>
+<script src="js/jquery-1.9.min.js"></script>
+<script src="js/throttle-debounce.min.js"></script>
+<script src="js/jquery.malihu.PageScroll2id.js"></script>
+<script src="js/stickies.js"></script>
+</script>
+   <script>
+
+
+   (function($){
+$(window).load(function(){
+ 
+$("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+highlightSelector:"#nav-menu a"
+});
+ 
+$("a[rel='next']").click(function(e){
+e.preventDefault();
+var to=$(this).parent().parent("section").next().attr("id");
+$.mPageScroll2id("scrollTo",to);
+});
+
+$("a[rel='m_PageScroll2id']").mPageScroll2id({
+    offset:49
+});
+ 
+});
+})(jQuery);
+
+
+
+(function($){
+$(window).load(function(){
+ 
+$("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+/* scroll animation speed in milliseconds: Integer */
+scrollSpeed:1300,
+/* auto-adjust animation speed (according to target element position and window scroll): Boolean */
+autoScrollSpeed:true,
+/* scroll animation easing when page is idle: String */
+scrollEasing:"easeInOutExpo",
+/* scroll animation easing while page is scrolling: String */
+scrollingEasing:"easeInOutCirc",
+/* end of page "smooth scrolling" (auto-adjust the scroll-to position when bottom elements are too short): Boolean */
+pageEndSmoothScroll:true,
+/* 
+page layout defines scrolling direction: String 
+values: "vertical", "horizontal", "auto" 
+*/
+layout:"vertical",
+/* extra space in pixels for the target element position: Integer */
+offset:0,
+/* highlight the main/default selectors or insert a different set: Boolean, String */
+highlightSelector:false,
+/* class of the clicked element: String */
+clickedClass:pluginPfx+"-clicked",
+/* class of the current target element: String */
+targetClass:pluginPfx+"-target",
+/* class of the highlighted element: String */
+highlightClass:pluginPfx+"-highlight",
+/* force a single highlighted element each time: Boolean */
+forceSingleHighlight:false,
+/* keep element highlighted until next (one element always stays highlighted): boolean */
+keepHighlightUntilNext:true,
+/* disable plugin below [x,y] screen size: boolean, integer, array ([x,y]) */
+disablePluginBelow:false,
+/* enable/disable click events for all selectors */
+clickEvents:true,
+/* user callback functions: fn */
+onStart:function(){},
+onComplete:function(){},
+/* enable/disable the default selector: Boolean */
+defaultSelector:false
+});
+});
+})(jQuery);
+            $(document).scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > $(window).height()) {
+                    // $('.menu-title').addClass('show fadein');
+                    // $('.home-section').addClass('opacity fadein');
+                    $('.header').addClass('fixed fadein');
+                    
+                } else {
+                    // $('.menu-title').removeClass('show fadein');
+                    // $('.home-section').removeClass('opacity fadein');
+                    $('.header').removeClass('fixed fadein');
+                  
+                }
+            });
+
+
+              $(document).scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > 100) {
+                    $('.menu-title').addClass('show fadein');
+                    $('.home-section').addClass('opacity fadein');
+                    $('.video_section').addClass('dark fadein');
+                } else {
+                    $('.menu-title').removeClass('show fadein');
+                    $('.home-section').removeClass('opacity fadein');
+                    $('.video_section').removeClass('dark fadein');
+                }
+            });
+
+             $(document).ready(function(){
+        $('#Container').stickies();
+  });
+
+
+            </script>
+
+
+             <script>
+
+ var topRange      = 200,  // measure from the top of the viewport to X pixels down
+     edgeMargin    = 20,   // margin above the top or margin from the end of the page
+     animationTime = 1200, // time in milliseconds
+     contentTop = [];
+
+$(document).ready(function(){ 
+
+
+
+ // Stop animated scroll if the user does something
+ $('html,body').bind('scroll mousedown DOMMouseScroll mousewheel keyup', function(e){
+ if ( e.which > 0 || e.type == 'mousedown' || e.type == 'mousewheel' ){
+  $('html,body').stop();
+ }
+})
+
+ // Set up content an array of locations
+ $('#sidemenu').find('a').each(function(){
+  contentTop.push( $( $(this).attr('href') ).offset().top );
+ })
+
+ // Animate menu scroll to content
+  $('#sidemenu').find('a').click(function(){
+   var sel = this,
+       newTop = Math.min( contentTop[ $('#sidemenu a').index( $(this) ) ], $(document).height() - $(window).height() ); // get content top or top position if at the document bottom
+   $('html,body').stop().animate({ 'scrollTop' : newTop }, animationTime, function(){
+    window.location.hash = $(sel).attr('href');
+   });
+   return false;
+ })
+ 
+ // adjust side menu
+ $(window).scroll(function(){
+  var winTop = $(window).scrollTop(),
+      bodyHt = $(document).height(),
+      vpHt = $(window).height() + edgeMargin;  // viewport height + margin
+  $.each( contentTop, function(i,loc){
+   if ( ( loc > winTop - edgeMargin && ( loc < winTop + topRange || ( winTop + vpHt ) >= bodyHt ) ) ){
+    $('#top-menu li')
+     .removeClass('active')
+     .eq(i).addClass('active');
+   }
+  })
+ })
+  
+})
+</script>
+
+
+    </script>
+
+<body>
+<a id="link"></a>
+  <div id="Container">
+    <a id="link"></a>
+    <section id="video-area" class="background-video should-play">
+ 
+
+
+    <div class="main"><div class="home-section fadein">
+
+<div class="fullscreen-main-padding customhome background" style="background: transparent;
+padding-top: 2%;
+padding-bottom: 0;">
+  <div class="container">
+
+  </div>
+</div></section>
+    <div></div>
+</div>
+
+
+<a href="#welcome"><div class="main2 mobilehidden"><div class="main2img video_section animate"><img src="img/main-top_emfitness_logoquality.png"/></div></div></a>
+
+<div class="fullscreen-main-padding spacing-hidden mobile-block background" style="background-image:url('img/first-section.jpg'); padding-top:0; padding-bottom:0;margin-top:0;height:100%;">
+<a href="#welcome"><div class="main2"><div class="main2img"><img src="img/main-top_emfitness_logoquality.png"/></div></div></a>
+</div>
+
+
+
+<div class="content-wrap">
+
+  <div class="relative">
+    <div class="empty"><a id="welcome"></a></div>
+<div class="header animate">
+    <div class="container nombile-left">
+<div class="menu-title animated">
+<div class="logo-header"><img src="/img/logo-black.png"></div>
+</div>
+<button class="nav-button">Menu</button>
+<ul id="nav-menu" class="nav">
+    <li class="active line"><a href="#link">HOME</a>  <span class="divider"></span></li>
+    <li class="line"><a href="#aboutlink">ABOUT</a>  <span class="divider"></span></li>
+
+    <li class="line"><a href="#testimonial">TESTIMONIAL</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#services">SERVICES</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#elliot">ABOUT ELLIOTT</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#faqs">FAQs</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#contact">CONTACT</a>  <span class="divider"></span></li>
+
+</ul>
+</div>
+</div>
+</div>  
+<!-- Relative ends -->
+
+<div class="content-inside">
+ <!--  <section id="aboutlink">
+
+
+<div class="fullscreen-main background" style="background-image:url('img/ELLIOTT2LOW.jpg');">
+  <div class="container">
+
+<div class="call-to-action">
+<div class="wrap-box"><h1 class="title">Boost Energy</br>Lose Weight</br>Feel Incredible</h1></div>
+<div class="spacing-call"></div>
+<div class="subtitle">EM Fitness is a personalized in-home training 
+service that specializes in maximum weight loss, toning and lifestyle changes.</div>
+<div class="spacing-call"></div><div class="clear"></div></br>
+<a href="#learnmore" class="action-btn">LEARN MORE</a>
+</div>
+
+
+</div>
+</div>
+
+</section>
+ -->
+
+
+      <section class="posts">
+        {block:NoSearchResults}
+          <h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
+        {/block:NoSearchResults}
+ 
+        {block:TagPage}
+          <h2 class="h1">#{Tag}</h2>
+        {/block:TagPage}
+ 
+        {block:Posts}
+          <article class="post {PostType}">
+            {block:Text}
+              {block:Title}
+                <a href="{Permalink}" class="post-title"><h2>{Title}</h2></a>
+              {/block:Title}
+             
+              {Body}
+             
+              {block:More}<a href="{Permalink}" class="p">Read More &raquo;</a>{/block:More}
+             
+            {/block:Text}
+ 
+            {block:Photo}
+              {LinkOpenTag}
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">          
+              {LinkCloseTag}
+ 
+              {block:Caption}
+                {Caption}
+              {/block:Caption}
+            {/block:Photo}
+ 
+            {block:Photoset}
+              {Photoset-500}
+ 
+              {block:Caption}
+                {Caption}
+              {/block:Caption}
+            {/block:Photoset}
+ 
+            {block:Quote}
+              <blockquote>
+                <p class="h3">&ldquo;{Quote}&rdquo;</p>
+ 
+                {block:Source}
+                  <p class="source">&ndash; {Source}</p>
+                {/block:Source}
+              </blockquote>
+            {/block:Quote}
+ 
+            {block:Link}
+              <h2><a href="{URL}"{Target}>{Name} &raquo;</a></h2>
+ 
+              {block:Description}
+                {Description}
+              {/block:Description}
+            {/block:Link}
+ 
+            {block:Chat}
+              {block:Title}
+                <h2>{Title}</h2>
+              {/block:Title}
+ 
+              <ul>
+                {block:Lines}
+                  <li class="{Alt}">
+                    {block:Label}
+                        <b>{Label}</b>
+                    {/block:Label}
+ 
+                    {Line}
+                  </li>
+                {/block:Lines}
+              </ul>
+            {/block:Chat}
+ 
+            {block:Audio}
+             
+              {AudioEmbed-640}
+             
+              {block:Caption}
+                {Caption}
+              {/block:Caption}
+            {/block:Audio}
+ 
+            {block:Video}
+              {Video-700}
+ 
+              {block:Caption}
+                {Caption}
+              {/block:Caption}
+            {/block:Video}
+ 
+            {block:Answer}
+              <h2>{Asker} asked: <q>{Question}</q></h2>
+ 
+              {Answer}
+            {/block:Answer}
+ 
+            {block:Date}
+              <footer>
+                <ul class="small">
+                  <li><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a></li>
+                  {block:RebloggedFrom}<li class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</li>{/block:RebloggedFrom}
+                  {block:ContentSource}
+                    <li class="source">via <a href="{SourceURL}">{SourceTitle}</a></li>
+                  {/block:ContentSource}
+                </ul>
+               
+                {block:PermalinkPage}
+                    {block:HasTags}
+                        <ul class="tags">
+                          {block:Tags}
+                            <li>
+                              <a href="{TagURL}">#{Tag}</a>
+                            </li>
+                          {/block:Tags}
+                        </ul>
+                    {/block:HasTags}      
+                {/block:PermalinkPage}
+                             
+              </footer>
+            {/block:Date}
+          </article> <!-- /post -->    
+       
+          {block:PostNotes}
+            <aside class="notes">
+              {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
+              {PostNotes-64}
+            </aside>
+          {/block:PostNotes}
+ 
+        {/block:Posts}
+       
+        {block:Pagination}
+          <div class="pagination p">
+            <span class="previous">{block:PreviousPage}<a href="{PreviousPage}" class="previous">{/block:PreviousPage}&laquo; Previous{block:PreviousPage}</a>{/block:PreviousPage}</span>
+            <span class="page-numbers">{CurrentPage}/{TotalPages}</span>
+            <span class="next">{block:NextPage}<a href="{NextPage}">{/block:NextPage}Next &raquo;{block:NextPage}</a>{/block:NextPage}</span>
+          </div>
+        {/block:Pagination}
+             
+      </section> <!-- /posts -->
+
+<!-- 
+
+<section id="testimonial">
+<div class="content-wrapper">
+
+
+<div class="aspect-video"><iframe src="http://player.vimeo.com/video/118720126?title=0&amp;byline=0&amp;portrait=0&amp;" height="100%" width="100%" allowfullscreen="" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+</div>
+</section> -->
+
+
+<div class="fullscreen-main-padding custom1 background" style="background-image:url('img/Elliott1LOW.jpg');">
+  <div class="container">
+
+<div class="call-to-action">
+<div class="wrap-box"><h1 class="title">Results</br>Like Never</br>Before</h1></div>
+<div class="spacing-call"></div>
+<div class="subtitle black-text">Delivering every service you need to reach your goals.</div>
+<div class="clear"></div></br></br></br>
+<a href="#contact" class="action-btn">CONTACT NOW</a>
+</div>
+
+
+</div>
+</div>
+
+
+<!-- 
+ <section id="services">
+
+  <div class="background about-section" style="padding-top:75px; padding-bottom:75px;">
+<div class="container">
+
+<a id="learnmore"></a>
+<div class="services-title mobile-small-space">Services</div>
+<div class="row smaller-size">
+      <div class=" col-sm-6 col-md-4">
+        
+<img src="img/location1.png" />
+
+
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+       <img src="img/workout-plan.png" />
+      </div>
+     <div class="col-sm-6 col-md-4">
+       <img src="img/playlist.png" />
+      </div>
+    </div>
+
+
+    <div class="row smaller-size">
+      <div class="col-sm-6 col-md-4">
+        
+<img src="img/meal.png" />
+
+
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+       <img src="img/coaching.png" />
+      </div>
+     <div class="col-sm-6 col-md-4">
+       <img src="img/online.png" />
+      </div>
+    </div>
+
+
+
+    <div class="row smaller-size">
+      <div class="col-sm-6 col-md-4">
+        
+<img src="img/startup.png" />
+
+
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+       <img src="img/checkin.png" />
+      </div>
+     <div class="col-sm-6 col-md-4">
+       <img src="img/rewards.png" />
+      </div>
+    </div>
+
+
+
+<div style="clear:both"></div>
+
+</div>
+</div>
+
+</section>
+
+ -->
+
+
+<!-- <section id="elliot">
+
+<div class="content-wrapper">
+<div class="aspect-video"><iframe src="http://player.vimeo.com/video/118720127?title=0&amp;byline=0&amp;portrait=0&amp;" height="100%" width="100%" allowfullscreen="" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+</div>
+
+</section> -->
+
+<!-- 
+
+<section id="faqs">
+<div class="faq">
+
+<div class="container">
+
+  <div class="faq-title space-title">FAQs</div>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What should I expect in my first session?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+       First, we sit down and get to know each other. We discuss your health and fitness history. We explore your goals and aspirations and set a date to achieve them. Then we do your first workout. This gives me an understanding of your fitness profile so I can create a program designed to achieve your goals. I also learn what exercises and music you enjoy so we have as much fun as possible at every session.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          Where will the training take place?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        Where ever you like. I come to your location of choice. As long as we have a decent amount of floor space we can have an awesome workout.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What kind of equipment will I need?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        None! I bring everything to you including dumbbells, kettle bells, bosuballs, boxing gloves, speakers etc.
+      </div>
+    </div>
+  </div>
+
+
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What is your certification and experience?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        I am Can-Fit Pro and Red Cross first Aid/CPR certified. I have six years experience working at different gyms such as System Fitness and Snap Fitness as well as working with my own personal trainer.
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What do you specialize in?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+       I have training in a wide range of fitness specialties including fitness model preparation, weight loss, and rehabilitation. However, for the past two years my focus has been on weight loss and toning up. I’m passionate about complete transformations so that’s where I dedicate most of my education and training.
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What types of results can I expect?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+        My previous clients have all successfully reached their desired goals. Whatever effort you put towards your training I will enthusiastically match and support to ensure you achieve your goal no matter what.
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          How much does it cost?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSeven" class="panel-collapse collapse">
+      <div class="panel-body">
+        Session rates are very competitive and sold in blocks. Contact me for more information.
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+</div>
+</div> <!-- end faqs -->
+</section> -->
+<div id="contact"></div>
+<section id="contact">
+<div class="contact-area">
+
+<div class="container">
+    <div class="title-content space-title white">LET'S CONNECT!</div>
+
+<div class="iframe"><iframe scrolling="no" 
+        seamless="seamles" class="foo" src="http://emfitness.ca/example.htm"></iframe></div>
+  <div class="logo-footer-main"><img src="img/logo-white.png" /></div>
+<div class="social"><a href="https://www.facebook.com/emfitnesscanada" target="_blank"><img src="img/1421301557_06-facebook-128.png" /></a><a href="https://twitter.com/emfitnesscanada" target="_blank"><img src="img/1421301628_03-twitter-128.png" /></a><a href="http://instagram.com/emfitnesscanada" target="_blank"><img src="img/1421301634_38-instagram-128.png" /></a></div>
+
+
+</div>
+
+</div><!-- End contact area -->
+</section>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div><!-- Content Wrap ends -->
+
+
+<script>
+$('.collapse').on('shown.bs.collapse', function(){
+$(this).parent().find(".glyphicon-arrow-right").removeClass("glyphicon-arrow-right").addClass("glyphicon-remove");
+}).on('hidden.bs.collapse', function(){
+$(this).parent().find(".glyphicon-remove").removeClass("glyphicon-remove").addClass("glyphicon-arrow-right");
+});
+
+$(document).ready(function(){
+      $(".nav-button").click(function () {
+      $(".nav-button,.nav").toggleClass("open");
+      });    
+    });
+
+$('a[href^="#learnmore"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - 131.341
+        }, 1000);
+    }
+
+});
+
+
+  
+
+
+  $('a[href^="#welcome"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
+
+
+  
+
+
+  </script>
+
+<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59338616-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

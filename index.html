@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- title and meta -->
+<meta charset="utf-8" />
+  <meta name="viewport" id="view" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta property="og:description" content="Onyx Motion is building a digital coach for Android Wear and the Apple Watch smartwatches to help you play like a pro." />
+<meta property="og:image" content="http://onyxmotion.com/coverphoto_onyx.png" />
+<meta property="og:site_name" content="Swish by Onyx Motion | Sports Coaching with Smart Watches"/>
+<link rel="icon" 
+      type="image/png" 
+      href="http://onyxmotion.com/favicon.png">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="style/bootstrap.min.css">
+<link rel="stylesheet" href="style/main.css" />
+<link href="style/animate.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="style/slicknav.css" />
+<title>Swish by Onyx Motion</title>
+    
+<!-- css -->
+
+<style>
+
+
+.dark {
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+
+.custom1 {
+  padding-top: 120px;
+  padding-bottom: 100px;
+    color:#000;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-size:100% auto;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  background-color: #fff;
+  background-image:url('img/IMG_2540.JPG') !important;
+  
+}
+
+
+
+.custom2 {
+  color:#000;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-size:100% auto;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  background-color: #fff;
+  background-image:url('img/demo2.jpg') !important;
+  
+}
+
+
+
+}
+
+  </style>
+</head>
+<script src="js/jquery-1.9.min.js"></script>
+<script src="js/throttle-debounce.min.js"></script>
+<script src="js/jquery.malihu.PageScroll2id.js"></script>
+<script src="js/stickies.js"></script>
+</script>
+   <script>
+
+
+   (function($){
+$(window).load(function(){
+ 
+$("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+highlightSelector:"#nav-menu a"
+});
+ 
+$("a[rel='next']").click(function(e){
+e.preventDefault();
+var to=$(this).parent().parent("section").next().attr("id");
+$.mPageScroll2id("scrollTo",to);
+});
+
+$("a[rel='m_PageScroll2id']").mPageScroll2id({
+    offset:49
+});
+ 
+});
+})(jQuery);
+
+
+
+(function($){
+$(window).load(function(){
+ 
+$("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+/* scroll animation speed in milliseconds: Integer */
+scrollSpeed:1300,
+/* auto-adjust animation speed (according to target element position and window scroll): Boolean */
+autoScrollSpeed:true,
+/* scroll animation easing when page is idle: String */
+scrollEasing:"easeInOutExpo",
+/* scroll animation easing while page is scrolling: String */
+scrollingEasing:"easeInOutCirc",
+/* end of page "smooth scrolling" (auto-adjust the scroll-to position when bottom elements are too short): Boolean */
+pageEndSmoothScroll:true,
+/* 
+page layout defines scrolling direction: String 
+values: "vertical", "horizontal", "auto" 
+*/
+layout:"vertical",
+/* extra space in pixels for the target element position: Integer */
+offset:0,
+/* highlight the main/default selectors or insert a different set: Boolean, String */
+highlightSelector:false,
+/* class of the clicked element: String */
+clickedClass:pluginPfx+"-clicked",
+/* class of the current target element: String */
+targetClass:pluginPfx+"-target",
+/* class of the highlighted element: String */
+highlightClass:pluginPfx+"-highlight",
+/* force a single highlighted element each time: Boolean */
+forceSingleHighlight:false,
+/* keep element highlighted until next (one element always stays highlighted): boolean */
+keepHighlightUntilNext:true,
+/* disable plugin below [x,y] screen size: boolean, integer, array ([x,y]) */
+disablePluginBelow:false,
+/* enable/disable click events for all selectors */
+clickEvents:true,
+/* user callback functions: fn */
+onStart:function(){},
+onComplete:function(){},
+/* enable/disable the default selector: Boolean */
+defaultSelector:false
+});
+});
+})(jQuery);
+            $(document).scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > $(window).height()) {
+                    // $('.menu-title').addClass('show fadein');
+                    // $('.home-section').addClass('opacity fadein');
+                    $('.header').addClass('fixed fadein');
+                    
+                } else {
+                    // $('.menu-title').removeClass('show fadein');
+                    // $('.home-section').removeClass('opacity fadein');
+                    $('.header').removeClass('fixed fadein');
+                  
+                }
+            });
+
+              $(document).scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > 250) {
+                    $('#Container2').addClass('coloradded fadeout');
+                } else {
+                    $('#Container2').removeClass('coloradded fadeout');
+                }
+            });
+
+
+              $(document).scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > 80) {
+                    $('.menu-title').addClass('show fadein');
+                    $('.home-section').addClass('opacity fadein');
+                    $('.video_section').addClass('dark fadein');
+                } else {
+                    $('.menu-title').removeClass('show fadein');
+                    $('.home-section').removeClass('opacity fadein');
+                    $('.video_section').removeClass('dark fadein');
+                }
+            });
+
+             $(document).ready(function(){
+      $('#Container').stickies();
+  });
+
+
+            </script>
+
+
+             <script>
+
+ var topRange      = 190,  // measure from the top of the viewport to X pixels down
+     edgeMargin    = 20,   // margin above the top or margin from the end of the page
+     animationTime = 1200, // time in milliseconds
+     contentTop = [];
+
+$(document).ready(function(){ 
+
+
+
+ // Stop animated scroll if the user does something
+ $('html,body').bind('scroll mousedown DOMMouseScroll mousewheel keyup', function(e){
+ if ( e.which > 0 || e.type == 'mousedown' || e.type == 'mousewheel' ){
+  $('html,body').stop();
+ }
+})
+
+ // Set up content an array of locations
+ $('#sidemenu').find('a').each(function(){
+  contentTop.push( $( $(this).attr('href') ).offset().top );
+ })
+
+ // Animate menu scroll to content
+  $('#sidemenu').find('a').click(function(){
+   var sel = this,
+       newTop = Math.min( contentTop[ $('#sidemenu a').index( $(this) ) ], $(document).height() - $(window).height() ); // get content top or top position if at the document bottom
+   $('html,body').stop().animate({ 'scrollTop' : newTop }, animationTime, function(){
+    window.location.hash = $(sel).attr('href');
+   });
+   return false;
+ })
+ 
+ // adjust side menu
+ $(window).scroll(function(){
+  var winTop = $(window).scrollTop(),
+      bodyHt = $(document).height(),
+      vpHt = $(window).height() + edgeMargin;  // viewport height + margin
+  $.each( contentTop, function(i,loc){
+   if ( ( loc > winTop - edgeMargin && ( loc < winTop + topRange || ( winTop + vpHt ) >= bodyHt ) ) ){
+    $('#top-menu li')
+     .removeClass('active')
+     .eq(i).addClass('active');
+   }
+  })
+ })
+  
+})
+</script>
+
+    </script>
+
+<body>
+
+
+
+  <!-- THIS IS THE VIDEO SECTION. This includes the video playing in the background, the pre-order button, and the title text. -->
+
+
+<a id="link"></a>
+<div id="Container2"></div>
+  <div id="Container">
+    <video class="display animate" autoplay="autoplay" id="vid" loop="true" muted="muted">
+   
+      <source src="OnyxMagic_-_HD_720p.mp4" type="video/mp4">
+      <source src="OnyxMagic_-_HD_720p.ogv" type="video/ogg">
+      <source src="OnyxMagic_-_HD_720p.webm" type="video/webm">
+  </video>
+
+    <a id="link"></a>
+    <section id="video-area" class="background-video should-play">
+ 
+
+
+    <div class="main"><div class="home-section fadein">
+
+<div class="fullscreen-main-padding extra-extra-padding customhome background" style="background: transparent;
+padding-top: 2%;
+padding-bottom: 0;">
+  <div class="container">
+
+  </div>
+</div></section>
+    <div></div>
+</div>
+<a href="https://www.indiegogo.com/projects/swish-the-basketball-coach-for-smartwatches/" id="order-now">Pre-order on IndieGogo</a>
+
+<a href="#welcome"><div class="main2 mobilehidden"><div class="main2img video_section animate">
+  <img src="xyz.png"/></div></div></a>
+
+<div class="fullscreen-main-padding extra-extra-padding spacing-hidden mobile-block background" style="background-image:url('mobile.png'); padding-top:0; padding-bottom:0;margin-top:0;height:100%;">
+<a href="#welcome"><div class="main2"><div class="main2img"><img src="2xyz.png"/></div></div></a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- THIS IS THE HEADER -->
+
+
+
+<div class="content-wrap">
+
+  <div class="relative">
+<div class="header animate">
+  <div class="container nombile-left">
+<div class="menu-title animated">
+<div class="logo-header"><img src="logo.png"></div>
+</div>
+<!-- <button class="nav-button">Menu</button> -->
+<ul id="nav-menu" class="nav">
+  <li class="active line"><a href="#link">HOME</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#aboutlink">ABOUT</a>  <span class="divider"></span></li>
+
+  <li class="line"><a href="#motion">MOTION MARKETPLACE</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#features">FEATURES</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#press">PRESS</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#contact">CONTACT US</a>  <span class="divider"></span></li>
+
+</ul>
+</div>
+</div>
+</div>  
+<!-- Relative ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- THIS IS WHERE THE CONTENT BEGINS -->
+
+<div class="content-inside">
+
+
+  <!-- THIS IS THE FIRST SECTION WITH THE WATCH -->
+  <section id="aboutlink">
+
+    <div class="empty"><a id="welcome"></a></div>
+<div class="fullscreen-main background" style="background:#19bc62;padding:0;');">
+  <div class="container">
+
+<div class="call-to-action" style="padding:0;">
+
+
+<div class="left-area-side">
+
+
+<div class="wrap-box"><h1 class="title">This is the future of coaching.</h1></div><h2 class="smaller">Swish uses data to adapt.</h2>
+<div class="spacing-call"></div>
+<div class="subtitle">Onyx Motion is building digital coaches to help you play like a pro.  The app uses Android Wear and Apple Watch smartwatches to show you how you play and how to improve at the moment you need it most.  It customizes the coaching style using past performance and machine learning to adapt to your needs.  It's ready to play when you are.</div><div class="clear"></div><div class="left-side">
+
+<a href="https://www.indiegogo.com/projects/swish-the-basketball-coach-for-smartwatches/" id="order-now">Pre-order on IndieGogo</a> </div>
+
+</div>
+  <div class="right-area-side">  <img src="big_watch.png" />
+
+
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- THE IS THE SECOND SECTION THAT HIGHLIGHTS THE MOTION MARKETPLACEE -->
+
+<section id="motion">
+<div class="fullscreen-main background" style="background:#141414;padding:0;');">
+  <div class="container">
+
+<div class="call-to-action" style="padding-bottom: 80px;">
+<h1 class="title-center">Meet your new best friend</h1>
+<h2 class="subtitle-center">Where better to get the secret to winning?</h1>
+
+<div class="card2">
+<img src="card.png" /></div>
+<p class="small-text2">Coaching modules by a selection of NBA players are available through the Motion Marketplace. 
+</br></br>
+Using data, videos, tips and tricks, we bring your hero to your court for 0.99 cents.</p>
+
+<div class="clear"></div>
+
+
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+
+
+
+<!-- THIS IS THE SECTION WITH THE PHONE -->
+
+
+<section id="features">
+<div class="fullscreen-main background" style="background:#e35a1c;border-bottom:2px solid #fff; padding:0;');">
+  <div class="container modified">
+
+<div class="call-to-action" style="padding:0;">
+
+
+<div class="left-area-side">
+
+
+<div class="wrap-box"><h1 class="title">Think Ahead</h1></div><h2 class="smaller">Play with a plan</h2>
+<div class="spacing-call"></div>
+<div class="subtitle">You need long term insight to drive real results. Swish combines data from metrics considered
+important to top coaches and players and creates custom tips, how-to’s and inspiration for you.
+</div>
+</div>
+  <div class="right-area-side-wide image">  <img src="phone.png" />
+
+
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- THIS IS THE PRESS SECTION -->
+
+
+<section id="scrollmail" class="email-signup">
+<div class="iframe"><iframe scrolling="no" 
+        seamless="seamles" class="foo" src="http://onyxmotion.damidina.webfactional.com/form2.htm"></iframe></div>
+</section>
+
+
+
+  <section id="press" class="full-width extra-padding left-right">
+  <div class="font-title">Featured in:</div>
+<div class="box-thirty">
+
+<div class="circle-area-press"><img src="img/globe.png" /></div>
+<div class="title-area-press">The Globe & Mail</div>
+<div class="subtitle-area-press">Why Toronto is a hotbed of pioneering wearable technology</div><div class="button-div2">
+<a href="http://www.theglobeandmail.com/technology/why-toronto-is-a-hotbed-of-pioneering-wearable-technology/article22447906/" target="blank" class="action-btn acolor2">Read Article</a>
+
+  </div>
+
+</div>
+
+<div class="box-thirty">
+
+<div class="circle-area-press"><img src="img/beta.png" /></div>
+<div class="title-area-press">BetaKit</div>
+<div class="subtitle-area-press">Onyx Motion entering the Next Gen Den</div><div class="button-div2">
+<a href="http://betakit.com/onyx-motion-hwki-some-of-the-early-stage-startups-entering-the-next-gen-den/" target="_blank" class="action-btn acolor2">Read Article</a>
+
+  </div>
+</div>
+
+
+<div class="box-thirty">
+
+<div class="circle-area-press"><img src="img/tv.png" /></div>
+<div class="title-area-press">TechVibes</div>
+<div class="subtitle-area-press">Onyx Motion Aims to Help Athletes Improve at Their Sports</div><div class="button-div2">
+<a href="http://www.techvibes.com/blog/onyx-motion-2015-01-07" target="_blank" class="action-btn acolor2">Read Article</a>
+
+  </div>
+</div>
+
+
+<div class="box-thirty">
+
+<div class="circle-area-press"><img src="img/ut.png" /></div>
+<div class="title-area-press">University of Toronto News</div>
+<div class="subtitle-area-press">Tech wearables holiday gift roundup: U of T startups take on smart watches, biometrics and more</div><div class="button-div2">
+<a href="http://news.utoronto.ca/tech-wearables-holiday-gift-roundup-u-t-startups-take-smart-watches-biometrics-and-more" target="_blank" class="action-btn acolor2">Read Article</a>
+
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- THIS IS THE DRAGON'S DEN SECTION -->
+
+<section class="dragon padding-div no-left-padding">
+
+
+<div class="section-left height">
+
+<img src="img/IMG_2581.PNG" />
+
+</div>
+<div class="section-left height extra-extra">
+
+<div class="text-abs">
+Watch Onyx Motion on Dragons' Den</div>
+<div class="subtitle-left">We were recently featured on CBC’s NextGenDen and became the first company to make a successful deal.  Watch us improve the Dragons' free throws!</div>
+
+<div style="clear:both"></div>
+<div class="button-div">
+<a href="http://www.cbc.ca/dragonsden/nextgenden/season1/next-gen-den-1" target="_blank" class="action-btn acolor">WATCH VIDEO</a>
+
+  </div>
+
+
+</div>
+  </section>
+
+<!-- THIS IS THE CONTACT FORM SECTION -->
+
+<div id="contact"></div>
+<section id="contact">
+<div class="contact-area">
+
+<div class="container">
+  <a id="contactnow"></a>
+    <div class="title-content space-title white">LET'S CONNECT!</div>
+
+<div class="iframe"><iframe class="bigger" scrolling="no" 
+        seamless="seamles" class="foo" src="http://onyxmotion.damidina.webfactional.com/form1.htm"></iframe></div>
+  <div class="logo-footer-main"><img src="img/1logo-white.png" /></div>
+<div class="row social-row">
+  <div class="social"><a href="https://www.facebook.com/onyxmotion" target="_blank"><img src="img/1421301557_06-facebook-128.png" /></a><a href="https://twitter.com/onyxmotionnews" target="_blank"><img src="img/1421301628_03-twitter-128.png" /></a><a href="http://instagram.com/onyxmotion" target="_blank"><img src="img/1421301634_38-instagram-128.png" /></a></div>
+</div>
+<div class="row">
+  <ul class="list-inline text-center">
+      <li><a href="privacy/index.html" style="color: #fff;" target="_blank">PRIVACY</a></li>
+      <li><a href="terms/index.html" style="color: #fff;" target="_blank">TERMS OF SERVICE</a></li>
+      <li><a style="color: #fff;" target="_blank">&copy; ONYX MOTION 2015</a></li>
+  </ul>
+</div>
+
+
+
+
+</div>
+
+</div>
+</section>
+
+
+
+</div><!-- Content Wrap ends -->
+
+
+<script>
+$('.collapse').on('shown.bs.collapse', function(){
+$(this).parent().find(".glyphicon-arrow-right").removeClass("glyphicon-arrow-right").addClass("glyphicon-remove");
+}).on('hidden.bs.collapse', function(){
+$(this).parent().find(".glyphicon-remove").removeClass("glyphicon-remove").addClass("glyphicon-arrow-right");
+});
+
+$(document).ready(function(){
+      $(".nav-button").click(function () {
+      $(".nav-button,.nav").toggleClass("open");
+      });    
+    });
+
+$('a[href^="#learnmore"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - 131.341
+        }, 1000);
+    }
+
+});
+
+
+
+$('a[href^="#contactnow"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - 131.341
+        }, 1000);
+    }
+
+});
+
+
+  
+
+
+  $('a[href^="#welcome"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
+
+
+  
+
+
+  </script>
+
+<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59338616-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

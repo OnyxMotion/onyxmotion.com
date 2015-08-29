@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- title and meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="style/main.css" />
+<link href="style/animate.css" rel="stylesheet" type="text/css"/>
+
+
+<!--[if GTE IE 6]><!-->
+
+<!-- The jQuery Framework -->
+<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+
+<!-- The FixedPosition plugin -->
+
+<script src="js/jquery.fixedposition.1.0.0-min.js"></script>
+
+<!-- Call the plugin on your jQuery object when the DOM is ready -->
+<script>
+  $(document).ready(function(){
+     $(".content-testing").fixedPosition({
+        debug: false,
+        fixedTo: "top",
+        effect: "slideUp",
+        effectSpeed: 200
+     });
+  });
+</script>
+
+<!--<![endif]-->
+</head>
+
+<body>	<div class="content-testing">  </div>
+
+	<div class="main">  </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- title and meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ <link rel="stylesheet" href="style/bootstrap.min.css">
+<meta name="description" content="EM Fitness is a personalized in-home training service that specializes in maximum weight loss, toning and lifestyle changes." />
+<link rel="stylesheet" href="style/main.css" />
+<link href="style/animate.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="style/slicknav.css" />
+<link rel="icon" type="image/png" href="/img/logo-black.png" />
+<meta property="og:description" content="EM Fitness is a personalized in-home training service that specializes in maximum weight loss, toning and lifestyle changes." />
+<meta property="og:image" content="http://emfitness.ca/img/fb-.png" />
+<meta property="og:site_name" content="EM Fitness"/>
+<title>Title</title>
+    
+<!-- css -->
+
+<style>
+
+
+.dark {
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+
+.custom1 {
+  padding-top: 120px;
+  padding-bottom: 100px;
+    color:#000;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-size:100% auto;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  background-color: #fff;
+  background-image:url('img/IMG_2540.JPG') !important;
+  
+}
+
+
+
+.custom2 {
+  color:#000;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-size:100% auto;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  background-color: #fff;
+  background-image:url('img/demo2.jpg') !important;
+  
+}
+
+
+
+}
+
+  </style>
+</head>
+<script src="js/jquery-1.9.min.js"></script>
+<script src="js/throttle-debounce.min.js"></script>
+<script src="js/jquery.malihu.PageScroll2id.js"></script>
+<script src="js/stickies.js"></script>
+</script>
+   <script>
+
+
+   (function($){
+$(window).load(function(){
+ 
+$("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+highlightSelector:"#nav-menu a"
+});
+ 
+$("a[rel='next']").click(function(e){
+e.preventDefault();
+var to=$(this).parent().parent("section").next().attr("id");
+$.mPageScroll2id("scrollTo",to);
+});
+
+$("a[rel='m_PageScroll2id']").mPageScroll2id({
+    offset:49
+});
+ 
+});
+})(jQuery);
+
+
+
+(function($){
+$(window).load(function(){
+ 
+$("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+/* scroll animation speed in milliseconds: Integer */
+scrollSpeed:1300,
+/* auto-adjust animation speed (according to target element position and window scroll): Boolean */
+autoScrollSpeed:true,
+/* scroll animation easing when page is idle: String */
+scrollEasing:"easeInOutExpo",
+/* scroll animation easing while page is scrolling: String */
+scrollingEasing:"easeInOutCirc",
+/* end of page "smooth scrolling" (auto-adjust the scroll-to position when bottom elements are too short): Boolean */
+pageEndSmoothScroll:true,
+/* 
+page layout defines scrolling direction: String 
+values: "vertical", "horizontal", "auto" 
+*/
+layout:"vertical",
+/* extra space in pixels for the target element position: Integer */
+offset:0,
+/* highlight the main/default selectors or insert a different set: Boolean, String */
+highlightSelector:false,
+/* class of the clicked element: String */
+clickedClass:pluginPfx+"-clicked",
+/* class of the current target element: String */
+targetClass:pluginPfx+"-target",
+/* class of the highlighted element: String */
+highlightClass:pluginPfx+"-highlight",
+/* force a single highlighted element each time: Boolean */
+forceSingleHighlight:false,
+/* keep element highlighted until next (one element always stays highlighted): boolean */
+keepHighlightUntilNext:true,
+/* disable plugin below [x,y] screen size: boolean, integer, array ([x,y]) */
+disablePluginBelow:false,
+/* enable/disable click events for all selectors */
+clickEvents:true,
+/* user callback functions: fn */
+onStart:function(){},
+onComplete:function(){},
+/* enable/disable the default selector: Boolean */
+defaultSelector:false
+});
+});
+})(jQuery);
+            $(document).scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > $(window).height()) {
+                    // $('.menu-title').addClass('show fadein');
+                    // $('.home-section').addClass('opacity fadein');
+                    $('.header').addClass('fixed fadein');
+                    
+                } else {
+                    // $('.menu-title').removeClass('show fadein');
+                    // $('.home-section').removeClass('opacity fadein');
+                    $('.header').removeClass('fixed fadein');
+                  
+                }
+            });
+
+
+              $(document).scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > 100) {
+                    $('.menu-title').addClass('show fadein');
+                    $('.home-section').addClass('opacity fadein');
+                    $('.video_section').addClass('dark fadein');
+                } else {
+                    $('.menu-title').removeClass('show fadein');
+                    $('.home-section').removeClass('opacity fadein');
+                    $('.video_section').removeClass('dark fadein');
+                }
+            });
+
+             $(document).ready(function(){
+    	$('#Container').stickies();
+  });
+
+
+            </script>
+
+
+             <script>
+
+ var topRange      = 200,  // measure from the top of the viewport to X pixels down
+     edgeMargin    = 20,   // margin above the top or margin from the end of the page
+     animationTime = 1200, // time in milliseconds
+     contentTop = [];
+
+$(document).ready(function(){ 
+
+
+
+ // Stop animated scroll if the user does something
+ $('html,body').bind('scroll mousedown DOMMouseScroll mousewheel keyup', function(e){
+ if ( e.which > 0 || e.type == 'mousedown' || e.type == 'mousewheel' ){
+  $('html,body').stop();
+ }
+})
+
+ // Set up content an array of locations
+ $('#sidemenu').find('a').each(function(){
+  contentTop.push( $( $(this).attr('href') ).offset().top );
+ })
+
+ // Animate menu scroll to content
+  $('#sidemenu').find('a').click(function(){
+   var sel = this,
+       newTop = Math.min( contentTop[ $('#sidemenu a').index( $(this) ) ], $(document).height() - $(window).height() ); // get content top or top position if at the document bottom
+   $('html,body').stop().animate({ 'scrollTop' : newTop }, animationTime, function(){
+    window.location.hash = $(sel).attr('href');
+   });
+   return false;
+ })
+ 
+ // adjust side menu
+ $(window).scroll(function(){
+  var winTop = $(window).scrollTop(),
+      bodyHt = $(document).height(),
+      vpHt = $(window).height() + edgeMargin;  // viewport height + margin
+  $.each( contentTop, function(i,loc){
+   if ( ( loc > winTop - edgeMargin && ( loc < winTop + topRange || ( winTop + vpHt ) >= bodyHt ) ) ){
+    $('#top-menu li')
+     .removeClass('active')
+     .eq(i).addClass('active');
+   }
+  })
+ })
+  
+})
+</script>
+
+
+    </script>
+
+<body>
+<a id="link"></a>
+  <div id="Container">
+    <video autoplay="autoplay" id="vid" loop="true" muted="muted">
+    <!--   <source src="profesh.mp4" type="video/mp4"> -->
+      <source src="OnyxMotion.mp4" type="video/mp4">
+      <source src="OnyxMotion.ogv" type="video/ogg">
+      <source src="OnyxMotion.webm" type="video/webm">
+  </video>
+<div class="header-new">
+<a href="http://google.com" id="order-now">Pre-order the app</a>
+
+<a href="http://google.com" id="order-now">Pre-order the app</a>
+</div>
+    <a id="link"></a>
+    <section id="video-area" class="background-video should-play">
+ 
+
+
+    <div class="main"><div class="home-section fadein">
+
+<div class="fullscreen-main-padding customhome background" style="background: transparent;
+padding-top: 2%;
+padding-bottom: 0;">
+  <div class="container">
+
+  </div>
+</div></section>
+    <div></div>
+</div>
+
+
+<a href="#welcome"><div class="main2 mobilehidden"><div class="main2img video_section animate"><img src="img/1logo-white.png"/></div></div></a>
+
+<div class="fullscreen-main-padding spacing-hidden mobile-block background" style="background-image:url('img/first-section.jpg'); padding-top:0; padding-bottom:0;margin-top:0;height:100%;">
+<a href="#welcome"><div class="main2"><div class="main2img"><img src="img/1logo-white.png"/></div></div></a>
+</div>
+
+
+
+<div class="content-wrap">
+
+  <div class="relative">
+    <div class="empty"><a id="welcome"></a></div>
+<div class="header animate">
+	<div class="container nombile-left">
+<div class="menu-title animated">
+<div class="logo-header"><img src="/img/logo-black.png"></div>
+</div>
+<button class="nav-button">Menu</button>
+<ul id="nav-menu" class="nav">
+	<li class="active line"><a href="#link">HOME</a>  <span class="divider"></span></li>
+	<li class="line"><a href="#aboutlink">ABOUT US</a>  <span class="divider"></span></li>
+
+	<li class="line"><a href="#testimonial">HOW IT WORKS</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#services">TEAM</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#faqs">FAQs</a>  <span class="divider"></span></li>
+  <li class="line"><a href="#contact">CONTACT US</a>  <span class="divider"></span></li>
+
+</ul>
+</div>
+</div>
+</div>  
+<!-- Relative ends -->
+
+<div class="content-inside">
+  <section id="aboutlink">
+
+
+<div class="fullscreen-main background" style="background:#ffd71b;');">
+  <div class="container">
+
+<div class="call-to-action">
+  <div class="right-area-side">
+<div class="wrap-box"><h1 class="title">A Digital Coach For The Modern Age</h1></div>
+<div class="spacing-call"></div>
+<div class="subtitle">Onyx Motion is building digital coaches to help you play like an experienced athlete.  The app uses smartwatches to show you how you play and how to improve at the moment you need it most.  Our coach is ready to play when you are.  Does learning have to be frustrating?</div>
+<div class="spacing-call"></div><div class="clear"></div></br>
+<a href="#learnmore" class="action-btn">LEARN MORE</a>
+
+</div>
+
+<div class="left-area-side"><img src="img/watch_congrats.png" /></div>
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+<section class="email-signup">
+<div class="iframe"><iframe scrolling="no" 
+        seamless="seamles" class="foo" src="example2.htm"></iframe></div>
+</section>
+<section class="full-width">
+
+  <div class="font-title">How it works</div>
+<div class="box-square-left blue-box">
+
+<div class="circle-area"><img src="img/square.png" /></div>
+<div class="title-area">Start with the why</div>
+<div class="subtitle-area">Onyx Motion tech focuses on technique: metrics, angles and speeds. The first step to fixing your game is find out finding out why. </div>
+
+</div>
+
+<div class="box-square-left red-box">
+
+<div class="circle-area"><img src="img/square.png" /></div>
+<div class="title-area">Instant Feedback</div>
+<div class="subtitle-area">Finding out how you did after the game is too late. Get what you need it, when you need it. Tips pop up into the stream as you play. Hit the problem, keep going.</div>
+</div>
+
+
+<div class="box-square-left orange-box">
+
+<div class="circle-area"><img src="img/square.png" /></div>
+<div class="title-area">AI x You</div>
+<div class="subtitle-area">AI doesn’t forget. AI doesn’t get emotional. AI doesn’t get tired. AI combines long term insights with a human touch to figure out how to build the perfect coach for you.   </div>
+</div>
+
+
+<div class="box-square-left green-box">
+
+<div class="circle-area"><img src="img/square.png" /></div>
+<div class="title-area">Connect to Your Heroes</div>
+<div class="subtitle-area">Get world class insights, tips, videos and data from your sports heroes. Their edge is at your command, right there on the court.</div>
+</div>
+
+<div style="clear:both"></div>
+
+
+
+</section>
+
+
+<section class="dragon">
+
+
+<div class="section-left">
+<img src="img/IMG_2581.PNG" />
+</div>
+<div class="section-left">
+  <div class="padding-div">
+<div class="text-abs">
+Watch Onyx Motion on Dragon's Den</div>
+<div class="subtitle-left">We were recently featured on Dragon's Den Next Gen</div>
+
+<div style="clear:both"></div></br></br></br>
+<a href="#learnmore" class="action-btn acolor">WATCH VIDEO</a>
+  </div>
+
+
+</div>
+  </section>
+
+
+
+  <section class="full-width extra-padding">
+  <div class="font-title">Team</div>
+<div class="box-thirty">
+
+<div class="circle-area"><img src="img/square.png" /></div>
+<div class="title-area">Marissa Wu</div>
+<div class="subtitle-area">Co-Founder and CEO</div>
+
+</div>
+
+<div class="box-thirty">
+
+<div class="circle-area"><img src="img/square.png" /></div>
+<div class="title-area">Vivek Kesarwani</div>
+<div class="subtitle-area">Co-Founder and CTO</div>
+</div>
+
+
+<div class="box-thirty">
+
+<div class="circle-area"><img src="img/square.png" /></div>
+<div class="title-area">Dami Dina</div>
+<div class="subtitle-area">UX/UI Designer</div>
+</div>
+
+
+<div class="box-thirty">
+
+<div class="circle-area"><img src="img/square.png" /></div>
+<div class="title-area">You?</div>
+<div class="subtitle-area">Check our current openings</div>
+</div>
+
+</section>
+
+
+<section class="dragon">
+
+<div class="section-left orange-box">
+  <div class="padding-div">
+<div class="text-abs">
+Download Our Press Kit</div>
+<div class="subtitle-left">We were recently featured on Dragon's Den Next Gen. Hello World</div>
+
+<div style="clear:both"></div></br></br></br>
+<a href="#learnmore" class="action-btn acolor">WATCH VIDEO</a>
+  </div>
+
+
+</div>
+
+
+
+<div class="section-left">
+<img src="img/presskit.jpg" />
+</div>
+  </section>
+
+
+
+
+
+<section id="faqs">
+<div class="faq">
+
+<div class="container">
+
+  <div class="font-title">FAQs</div>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          A question?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi tellus, convallis vel scelerisque vitae, elementum eu eros. Cras eu metus eu libero dignissim dignissim. Suspendisse dictum suscipit dignissim. Vivamus feugiat commodo tellus. Proin ipsum orci, porttitor quis sapien sed, ornare pulvinar velit. Praesent convallis lectus erat, ac imperdiet eros semper at. Phasellus faucibus quam vel quam venenatis volutpat. Sed fringilla purus vitae bibendum dictum. Donec arcu diam, eleifend nec tempor id, iaculis eu elit. Sed id lorem justo. Pellentesque porttitor posuere rhoncus.
+
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          A question
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi tellus, convallis vel scelerisque vitae, elementum eu eros. Cras eu metus eu libero dignissim dignissim. Suspendisse dictum suscipit dignissim. Vivamus feugiat commodo tellus. Proin ipsum orci, porttitor quis sapien sed, ornare pulvinar velit. Praesent convallis lectus erat, ac imperdiet eros semper at. Phasellus faucibus quam vel quam venenatis volutpat. Sed fringilla purus vitae bibendum dictum. Donec arcu diam, eleifend nec tempor id, iaculis eu elit. Sed id lorem justo. Pellentesque porttitor posuere rhoncus.
+
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          A question
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi tellus, convallis vel scelerisque vitae, elementum eu eros. Cras eu metus eu libero dignissim dignissim. Suspendisse dictum suscipit dignissim. Vivamus feugiat commodo tellus. Proin ipsum orci, porttitor quis sapien sed, ornare pulvinar velit. Praesent convallis lectus erat, ac imperdiet eros semper at. Phasellus faucibus quam vel quam venenatis volutpat. Sed fringilla purus vitae bibendum dictum. Donec arcu diam, eleifend nec tempor id, iaculis eu elit. Sed id lorem justo. Pellentesque porttitor posuere rhoncus.
+
+
+      </div>
+    </div>
+  </div>
+
+
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          A question
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi tellus, convallis vel scelerisque vitae, elementum eu eros. Cras eu metus eu libero dignissim dignissim. Suspendisse dictum suscipit dignissim. Vivamus feugiat commodo tellus. Proin ipsum orci, porttitor quis sapien sed, ornare pulvinar velit. Praesent convallis lectus erat, ac imperdiet eros semper at. Phasellus faucibus quam vel quam venenatis volutpat. Sed fringilla purus vitae bibendum dictum. Donec arcu diam, eleifend nec tempor id, iaculis eu elit. Sed id lorem justo. Pellentesque porttitor posuere rhoncus.
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          A question
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi tellus, convallis vel scelerisque vitae, elementum eu eros. Cras eu metus eu libero dignissim dignissim. Suspendisse dictum suscipit dignissim. Vivamus feugiat commodo tellus. Proin ipsum orci, porttitor quis sapien sed, ornare pulvinar velit. Praesent convallis lectus erat, ac imperdiet eros semper at. Phasellus faucibus quam vel quam venenatis volutpat. Sed fringilla purus vitae bibendum dictum. Donec arcu diam, eleifend nec tempor id, iaculis eu elit. Sed id lorem justo. Pellentesque porttitor posuere rhoncus.
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          A question
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi tellus, convallis vel scelerisque vitae, elementum eu eros. Cras eu metus eu libero dignissim dignissim. Suspendisse dictum suscipit dignissim. Vivamus feugiat commodo tellus. Proin ipsum orci, porttitor quis sapien sed, ornare pulvinar velit. Praesent convallis lectus erat, ac imperdiet eros semper at. Phasellus faucibus quam vel quam venenatis volutpat. Sed fringilla purus vitae bibendum dictum. Donec arcu diam, eleifend nec tempor id, iaculis eu elit. Sed id lorem justo. Pellentesque porttitor posuere rhoncus.
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          How much does it cost?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSeven" class="panel-collapse collapse">
+      <div class="panel-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi tellus, convallis vel scelerisque vitae, elementum eu eros. Cras eu metus eu libero dignissim dignissim. Suspendisse dictum suscipit dignissim. Vivamus feugiat commodo tellus. Proin ipsum orci, porttitor quis sapien sed, ornare pulvinar velit. Praesent convallis lectus erat, ac imperdiet eros semper at. Phasellus faucibus quam vel quam venenatis volutpat. Sed fringilla purus vitae bibendum dictum. Donec arcu diam, eleifend nec tempor id, iaculis eu elit. Sed id lorem justo. Pellentesque porttitor posuere rhoncus.
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+</div>
+</div> 
+</section>
+
+
+
+<!-- <section id="aboutlink">
+
+
+<div class="fullscreen-main background" style="background:#fff;');">
+  <div class="container">
+
+<div class="call-to-action">
+  <div class="right-area-side">
+<div class="wrap-box"><h1 class="title">A Digital Coach For The Modern Age</h1></div>
+<div class="spacing-call"></div>
+<div class="subtitle">Onyx Motion is building digital coaches to help you play like an experienced athlete.  The app uses smartwatches to show you how you play and how to improve at the moment you need it most.  Our coach is ready to play when you are.  Does learning have to be frustrating?</div>
+<div class="spacing-call"></div><div class="clear"></div></br>
+<a href="#learnmore" class="action-btn">LEARN MORE</a>
+
+</div>
+
+<div class="left-area-side"><div class="font-title">101</div></div>
+</div>
+
+
+</div>
+</div>
+
+</section> -->
+
+
+<!-- 
+<section id="testimonial">
+<div class="content-wrapper">
+
+
+<div class="aspect-video"><iframe src="http://player.vimeo.com/video/118720126?title=0&amp;byline=0&amp;portrait=0&amp;" height="100%" width="100%" allowfullscreen="" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+</div>
+</section>
+
+
+<div class="fullscreen-main-padding custom1 background" style="background-image:url('img/Elliott1LOW.jpg');">
+  <div class="container">
+
+<div class="call-to-action">
+<div class="wrap-box"><h1 class="title">Results</br>Like Never</br>Before</h1></div>
+<div class="spacing-call"></div>
+<div class="subtitle black-text">Delivering every service you need to reach your goals.</div>
+<div class="clear"></div></br></br></br>
+<a href="#contactnow" class="action-btn">CONTACT NOW</a>
+</div>
+
+
+</div>
+</div> -->
+
+
+<!-- 
+ <section id="services">
+
+  <div class="background about-section" style="padding-top:75px; padding-bottom:75px;">
+<div class="container">
+
+<a id="learnmore"></a>
+<div class="services-title mobile-small-space">Services</div>
+<div class="row smaller-size">
+      <div class=" col-sm-6 col-md-4">
+        
+<img src="img/location1.png" />
+
+
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+       <img src="img/workout-plan.png" />
+      </div>
+     <div class="col-sm-6 col-md-4">
+       <img src="img/playlist.png" />
+      </div>
+    </div>
+
+
+    <div class="row smaller-size">
+      <div class="col-sm-6 col-md-4">
+        
+<img src="img/meal.png" />
+
+
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+       <img src="img/coaching.png" />
+      </div>
+     <div class="col-sm-6 col-md-4">
+       <img src="img/online.png" />
+      </div>
+    </div>
+
+
+
+    <div class="row smaller-size">
+      <div class="col-sm-6 col-md-4">
+        
+<img src="img/startup.png" />
+
+
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+       <img src="img/checkin.png" />
+      </div>
+     <div class="col-sm-6 col-md-4">
+       <img src="img/rewards.png" />
+      </div>
+    </div>
+
+
+
+<div style="clear:both"></div>
+
+</div>
+</div>
+
+</section>
+
+
+
+
+<section id="elliot">
+
+<div class="content-wrapper">
+<div class="aspect-video"><iframe src="http://player.vimeo.com/video/118720127?title=0&amp;byline=0&amp;portrait=0&amp;" height="100%" width="100%" allowfullscreen="" frameborder="0"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+</div>
+
+</section>
+
+
+
+<section id="faqs">
+<div class="faq">
+
+<div class="container">
+
+  <div class="faq-title space-title">FAQs</div>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What should I expect in my first session?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+       First, we sit down and get to know each other. We discuss your health and fitness history. We explore your goals and aspirations and set a date to achieve them. Then we do your first workout. This gives me an understanding of your fitness profile so I can create a program designed to achieve your goals. I also learn what exercises and music you enjoy so we have as much fun as possible at every session.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          Where will the training take place?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        Where ever you like. I come to your location of choice. As long as we have a decent amount of floor space we can have an awesome workout.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What kind of equipment will I need?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        None! I bring everything to you including dumbbells, kettle bells, bosuballs, boxing gloves, speakers etc.
+      </div>
+    </div>
+  </div>
+
+
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What is your certification and experience?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        I am Can-Fit Pro and Red Cross first Aid/CPR certified. I have six years experience working at different gyms such as System Fitness and Snap Fitness as well as working with my own personal trainer.
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What do you specialize in?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+       I have training in a wide range of fitness specialties including fitness model preparation, weight loss, and rehabilitation. However, for the past two years my focus has been on weight loss and toning up. I’m passionate about complete transformations so that’s where I dedicate most of my education and training.
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          What types of results can I expect?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+        My previous clients have all successfully reached their desired goals. Whatever effort you put towards your training I will enthusiastically match and support to ensure you achieve your goal no matter what.
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          How much does it cost?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSeven" class="panel-collapse collapse">
+      <div class="panel-body">
+        Session rates are very competitive and sold in blocks. Contact me for more information.
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+</div>
+</div> 
+</section>
+<div id="contact"></div>
+<section id="contact">
+<div class="contact-area">
+
+<div class="container">
+  <a id="contactnow"></a>
+    <div class="title-content space-title white">LET'S CONNECT!</div>
+
+<div class="iframe"><iframe scrolling="no" 
+        seamless="seamles" class="foo" src="http://emfitness.ca/example.htm"></iframe></div>
+  <div class="logo-footer-main"><img src="img/logo-white.png" /></div>
+<div class="social"><a href="https://www.facebook.com/emfitnesscanada" target="_blank"><img src="img/1421301557_06-facebook-128.png" /></a><a href="https://twitter.com/emfitnesscanada" target="_blank"><img src="img/1421301628_03-twitter-128.png" /></a><a href="http://instagram.com/emfitnesscanada" target="_blank"><img src="img/1421301634_38-instagram-128.png" /></a></div>
+
+
+</div>
+
+</div>
+</section> -->
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div><!-- Content Wrap ends -->
+
+
+<script>
+$('.collapse').on('shown.bs.collapse', function(){
+$(this).parent().find(".glyphicon-arrow-right").removeClass("glyphicon-arrow-right").addClass("glyphicon-remove");
+}).on('hidden.bs.collapse', function(){
+$(this).parent().find(".glyphicon-remove").removeClass("glyphicon-remove").addClass("glyphicon-arrow-right");
+});
+
+$(document).ready(function(){
+      $(".nav-button").click(function () {
+      $(".nav-button,.nav").toggleClass("open");
+      });    
+    });
+
+$('a[href^="#learnmore"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - 131.341
+        }, 1000);
+    }
+
+});
+
+
+
+$('a[href^="#contactnow"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - 131.341
+        }, 1000);
+    }
+
+});
+
+
+  
+
+
+  $('a[href^="#welcome"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
+
+
+  
+
+
+  </script>
+
+<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59338616-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
