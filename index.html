@@ -315,8 +315,167 @@ padding-bottom: 0;">
                 <div class="menu-title animated">
                     <div class="logo-header"><img src="logo.png"></div>
                 </div>
+
+                <!--Hamburger Icon Start-->
+                <style>
+
+                    .menu-btn{
+                        display: none;
+                    }
+
+                    @media screen and (max-width: 1100px) {
+
+                        .menu-btn{
+                            display: block;
+                        }
+
+                        .responsive-menu {
+                            display: none;
+                        }
+
+                        .expand {
+                            display: block !important;
+                        }
+
+                        .c-hamburger {
+                            display: block;
+                            position: relative;
+                            overflow: hidden;
+                            margin: 0;
+                            padding: 0;
+                            width: 48px;
+                            height: 48px;
+                            font-size: 0;
+                            text-indent: -9999px;
+                            appearance: none;
+                            box-shadow: none;
+                            border-radius: none;
+                            border: none;
+                            cursor: pointer;
+                            transition: background 0.3s;
+                        }
+
+                        .c-hamburger:focus {
+                            outline: none;
+                        }
+
+                        .c-hamburger span {
+                            display: block;
+                            position: absolute;
+                            top: 22px;
+                            left: 9px;
+                            right: 9px;
+                            height: 5px;
+                            background: white;
+                        }
+
+                        .c-hamburger span::before,
+                        .c-hamburger span::after {
+                            position: absolute;
+                            display: block;
+                            left: 0;
+                            width: 100%;
+                            height: 4px;
+                            background-color: #fff;
+                            content: "";
+                        }
+
+                        .c-hamburger span::before {
+                            top: -10px;
+                        }
+
+                        .c-hamburger span::after {
+                            bottom: -10px;
+                        }
+
+                        .c-hamburger--htx {
+                            background-color: #32dc64;
+                        }
+
+                        .c-hamburger--htx span {
+                            transition: background 0s 0.3s;
+                        }
+
+                        .c-hamburger--htx span::before,
+                        .c-hamburger--htx span::after {
+                            transition-duration: 0.3s, 0.3s;
+                            transition-delay: 0.3s, 0s;
+                        }
+
+                        .c-hamburger--htx span::before {
+                            transition-property: top, transform;
+                        }
+
+                        .c-hamburger--htx span::after {
+                            transition-property: bottom, transform;
+                        }
+
+                        /* active state, i.e. menu open */
+                        .c-hamburger--htx.is-active {
+                            background-color: #32dc64;
+                        }
+
+                        .c-hamburger--htx.is-active span {
+                            background: none;
+                        }
+
+                        .c-hamburger--htx.is-active span::before {
+                            top: 0;
+                            transform: rotate(45deg);
+                        }
+
+                        .c-hamburger--htx.is-active span::after {
+                            bottom: 0;
+                            transform: rotate(-45deg);
+                        }
+
+                        .c-hamburger--htx.is-active span::before,
+                        .c-hamburger--htx.is-active span::after {
+                            transition-delay: 0s, 0.3s;
+                        }
+
+                        #menu-btn {
+                            float: right;
+                            margin: 7.5px 25px 7.5px 0px;
+                        }
+                    }
+                </style>
+
                 <!-- <button class="nav-button">Menu</button> -->
-                <ul id="nav-menu" class="nav">
+
+                <button id="menu-btn" class="menu-btn c-hamburger c-hamburger--htx">
+                    <span>toggle menu</span>
+                </button>
+
+
+                <!--Hamburger Icon End-->
+                <style>
+
+                    @media screen and (max-width: 1100px)
+                    {
+                        .nav-menu
+                        {
+                            width: 100%;
+                        }
+
+                        .nav
+                        {
+                            width: 100%;
+                            background-color: #141414;
+                        }
+                        .nav li
+                        {
+                            display: block;
+                            float: left;
+                            clear: left;
+                            width: 100%;
+                            background-color: #141414;
+                        }
+                    }
+
+                </style>
+
+                <ul id="nav-menu" class="nav responsive-menu">
                     <li class="active line"><a href="#link">HOME</a> <span class="divider"></span></li>
                     <li class="line"><a href="#aboutlink">ABOUT</a> <span class="divider"></span></li>
 
@@ -670,6 +829,48 @@ padding-bottom: 0;">
 
     ga('create', 'UA-59338616-1', 'auto');
     ga('send', 'pageview');
+
+    //    To animate the hamburger menu icon
+    (function() {
+
+        "use strict";
+
+        var toggles = document.querySelectorAll(".c-hamburger");
+
+        for (var i = toggles.length - 1; i >= 0; i--) {
+            var toggle = toggles[i];
+            toggleHandler(toggle);
+        };
+
+        function toggleHandler(toggle) {
+            toggle.addEventListener( "click", function(e) {
+                e.preventDefault();
+                (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+            });
+        }
+
+    })();
+
+    (function(){
+        $( '.menu-btn' ).click(function(){
+            $('.responsive-menu').toggleClass('expand');
+            $('.menu-btn').addClass('btn-none')
+        })
+    })
+
+    (function($){
+        $( '.menu-btn' ).click(function(){
+            $('.responsive-menu').toggleClass('expand')
+        })
+    })
+
+    $(document).on("click",".responsive-menu", function () {
+        $('.responsive-menu').removeClass('expand');
+        $('.menu-btn').trigger('click');
+        $('.responsive-menu').removeClass('expand')
+    });
+
+    // End of script to animate icon
 
 </script>
 
