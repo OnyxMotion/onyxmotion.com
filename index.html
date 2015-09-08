@@ -318,13 +318,13 @@ padding-bottom: 0;">
                 <!--Hamburger Icon Start-->
                 <style>
 
-                    .menu-btn{
+                    .menu-btn {
                         display: none;
                     }
 
                     @media screen and (max-width: 1100px) {
 
-                        .menu-btn{
+                        .menu-btn {
                             display: block;
                         }
 
@@ -448,20 +448,17 @@ padding-bottom: 0;">
                 <!--Hamburger Icon End-->
                 <style>
 
-                    @media screen and (max-width: 1100px)
-                    {
-                        .nav-menu
-                        {
+                    @media screen and (max-width: 1100px) {
+                        .nav-menu {
                             width: 100%;
                         }
 
-                        .nav
-                        {
+                        .nav {
                             width: 100%;
                             background-color: #141414;
                         }
-                        .nav li
-                        {
+
+                        .nav li {
                             display: block;
                             float: left;
                             clear: left;
@@ -827,8 +824,11 @@ padding-bottom: 0;">
     ga('create', 'UA-59338616-1', 'auto');
     ga('send', 'pageview');
 
+    // For the Hamburger menu.
+
+
     //    To animate the hamburger menu icon
-    (function() {
+    (function () {
 
         "use strict";
 
@@ -837,10 +837,11 @@ padding-bottom: 0;">
         for (var i = toggles.length - 1; i >= 0; i--) {
             var toggle = toggles[i];
             toggleHandler(toggle);
-        };
+        }
+        ;
 
         function toggleHandler(toggle) {
-            toggle.addEventListener( "click", function(e) {
+            toggle.addEventListener("click", function (e) {
                 e.preventDefault();
                 (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
             });
@@ -848,24 +849,32 @@ padding-bottom: 0;">
 
     })();
 
-    (function(){
-        $( '.menu-btn' ).click(function(){
+    (function () {
+        $('.menu-btn').click(function () {
             $('.responsive-menu').toggleClass('expand');
             $('.menu-btn').addClass('btn-none')
         })
     })
 
-    (function($){
-        $( '.menu-btn' ).click(function(){
+    (function ($) {
+        $('.menu-btn').click(function () {
             $('.responsive-menu').toggleClass('expand')
         })
     })
 
-    $(document).on("click",".responsive-menu", function () {
-        $('.responsive-menu').removeClass('expand');
-        $('.menu-btn').trigger('click');
-        $('.responsive-menu').removeClass('expand')
+
+    // Only run when the window is in mobile form
+
+    $(document).on("click", ".responsive-menu", function () {
+        if ($('.responsive-menu').hasClass('expand')) {
+
+            $('.menu-btn').trigger('click');
+            $('.responsive-menu').removeClass('expand')
+        }
+
+
     });
+
 
     // End of script to animate icon
 
