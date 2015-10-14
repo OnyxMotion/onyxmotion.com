@@ -604,23 +604,55 @@ padding-bottom: 0;">
         </section>
 
 
+        <!--THIS IS THE APPLICATIONS FOR SWISH SECTION -->
 
-        <section>
+        <section id="Applications-for-Swish">
+
             <div class="fullscreen-main background" style="background:#000000;boarder-bottom:2px solid #fff;padding:0">
+                <div class="font-title">Limitless Possibilities</div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <iframe src="https://vine.co/v/epptLlLv6bB/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+                    <div class= "play_on_hover">
+                        <video class="col-md-4" autoplay="autoplay" id="vid" loop="true" muted="muted">
+                            <source src="gif/Application1-BeerPong.mp4" type="video/mp4">
+                                <!-- <a href="https://vine.co/u/1218012899621408768"> -->
+                        </video>
                     </div>
-                    <div class="col-md-4">
-                        <iframe src="https://vine.co/v/ep0ed59dDj9/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+                    <div class="play_on_hover">
+                        <video class="col-md-4" autoplay="autoplay" id="vid" loop="true" muted="muted">
+                            <source src="gif/Application2-Tennis.mp4" type="video/mp4">
+                                <!-- <a href="https://vine.co/u/1218012899621408768"> -->
+                        </video>
                     </div>
-                    <div class="col-md-4">
-
-                        <iframe src="https://vine.co/v/epjUvUgg0W9/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+                    <div class="play_on_hover">
+                        <video class="col-md-4" autoplay="autoplay" id="vid" loop="true" muted="muted">
+                            <source src="gif/Application3-Golf.mp4" type="video/mp4">
+                                <!-- <a href="https://vine.co/u/1218012899621408768"> -->
+                        </video>
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <script>
+            $(document).ready(function () {
+                $(".play_on_hover").hover(function () {
+                    $(this).children("video")[0].play();
+                }, function () {
+                    var el = $(this).children("video")[0];
+                    el.pause();
+                    el.currentTime = 0;
+                });
+            });
+        </script>
+
+
+
+
+
+
+
+
 
 
         <!-- THIS IS THE PRESS SECTION -->
