@@ -609,50 +609,34 @@ padding-bottom: 0;">
         <section id="Applications-for-Swish">
 
             <div class="fullscreen-main background" style="background:#000000;boarder-bottom:2px solid #fff;padding:0">
-                <div class="font-title">Limitless Possibilities</div>
-                <div class="row">
-                    <div class= "play_on_hover">
-                        <video class="col-md-4" autoplay="autoplay" id="vid" loop="true" muted="muted">
-                            <source src="gif/Application1-BeerPong.mp4" type="video/mp4">
-                                <!-- <a href="https://vine.co/u/1218012899621408768"> -->
-                        </video>
-                    </div>
-                    <div class="play_on_hover">
-                        <video class="col-md-4" autoplay="autoplay" id="vid" loop="true" muted="muted">
-                            <source src="gif/Application2-Tennis.mp4" type="video/mp4">
-                                <!-- <a href="https://vine.co/u/1218012899621408768"> -->
-                        </video>
-                    </div>
-                    <div class="play_on_hover">
-                        <video class="col-md-4" autoplay="autoplay" id="vid" loop="true" muted="muted">
-                            <source src="gif/Application3-Golf.mp4" type="video/mp4">
-                                <!-- <a href="https://vine.co/u/1218012899621408768"> -->
-                        </video>
-                    </div>
+                <div class="title-center" style="padding:20px;font-size:40px">Limitless Possibilities</div>
+                <div class"row">
+                    <div class="col-md-4 smaller" style="color:#ffffff; text-align:center">Beer Pong</div>
+                    <div class="col-md-4 smaller" style="color:#ffffff; text-align:center">Tennis</div>
+                    <div class="col-md-4 smaller" style="color:#ffffff; text-align:center">Golf</div>
                 </div>
+                <a href="https://vine.co/u/1218012899621408768">
+                    <div class="row">
+                        <div class= "play_on_hover">
+                            <video class="col-md-4" id="vid" loop="true" muted="muted">
+                                <source src="gif/Application1-BeerPong.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="play_on_hover">
+                            <video class="col-md-4" id="vid" loop="true" muted="muted">
+                                <source src="gif/Application2-Tennis.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="play_on_hover">
+                            <video class="col-md-4" id="vid" loop="true" muted="muted">
+                                <source src="gif/Application3-Golf.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </a>
+                <div class="row"></div>
             </div>
         </section>
-
-
-        <script>
-            $(document).ready(function () {
-                $(".play_on_hover").hover(function () {
-                    $(this).children("video")[0].play();
-                }, function () {
-                    var el = $(this).children("video")[0];
-                    el.pause();
-                    el.currentTime = 0;
-                });
-            });
-        </script>
-
-
-
-
-
-
-
-
 
 
         <!-- THIS IS THE PRESS SECTION -->
@@ -853,6 +837,18 @@ padding-bottom: 0;">
             }, 1000);
         }
 
+    });
+
+
+    //script to play on hover
+    $(document).ready(function () {
+        $(".play_on_hover").hover(function () {
+            $(this).children("video")[0].play();
+        }, function () {
+            var el = $(this).children("video")[0];
+            el.pause();
+            el.currentTime = 0;
+        });
     });
 
 
